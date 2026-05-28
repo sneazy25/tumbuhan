@@ -36,8 +36,8 @@ export function Navbar({ lang, setLang }: NavbarProps) {
         </div>
         <div className="flex items-center gap-3">
           <DropdownMenu>
-            <DropdownMenuTrigger className="group flex items-center h-9 gap-2 pl-1.5 pr-3 text-xs font-bold rounded-full bg-background/50 hover:bg-muted/80 backdrop-blur-md border border-border/50 shadow-sm transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
-              <div className="size-6 rounded-full overflow-hidden ring-1 ring-border/50 shrink-0 shadow-sm group-hover:scale-105 transition-transform">
+            <DropdownMenuTrigger className="group flex items-center h-8 md:h-9 gap-1.5 md:gap-2 pl-1 md:pl-1.5 pr-2 md:pr-3 text-[10px] md:text-xs font-bold rounded-full bg-background/50 hover:bg-muted/80 backdrop-blur-md border border-border/50 shadow-sm transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
+              <div className="size-5 md:size-6 rounded-full overflow-hidden ring-1 ring-border/50 shrink-0 shadow-sm group-hover:scale-105 transition-transform">
                 <img 
                   src={lang === "id" ? "https://flagcdn.com/w40/id.png" : "https://flagcdn.com/w40/us.png"} 
                   alt={lang} 
@@ -75,7 +75,7 @@ export function Navbar({ lang, setLang }: NavbarProps) {
           </DropdownMenu>
           
           <Dialog>
-            <DialogTrigger render={<Button className="bg-primary text-primary-foreground hover:bg-primary/90 text-sm font-semibold rounded-full px-5 shadow-sm transition-all h-9" />}>
+            <DialogTrigger render={<Button className="bg-primary text-primary-foreground hover:bg-primary/90 text-xs md:text-sm font-semibold rounded-full px-3 md:px-5 shadow-sm transition-all h-8 md:h-9" />}>
               {t.nav.howItWorks}
             </DialogTrigger>
             <DialogContent className="sm:max-w-md bg-card border-border/50 backdrop-blur-xl">
