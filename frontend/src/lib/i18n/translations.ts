@@ -42,7 +42,7 @@ export const translations = {
       prediction: "Prediksi"
     },
     footer: {
-      desc: "Asisten cerdas pendeteksi kesehatan tanaman Anda. Dibangun dengan kecerdasan buatan mutakhir untuk mendukung masa depan pertanian yang lebih baik dan berkelanjutan.",
+      desc: "Platform pendeteksi kesehatan tanaman berbasis kecerdasan buatan yang dirancang untuk memberikan analisis cepat, akurat, dan terpercaya.",
       quickLinks: "Tautan Cepat",
       home: "Beranda",
       privacy: "Kebijakan Privasi",

@@ -165,7 +165,7 @@ export function Footer({ lang }: FooterProps) {
             &copy; {new Date().getFullYear()} Leafity. {t.footer.copyright}
           </div>
           <div className="flex items-center gap-4 text-sm text-muted-foreground">
-            <span>-</span>
+            <span>All Rights Reserved</span>
           </div>
         </div>
       </div>
