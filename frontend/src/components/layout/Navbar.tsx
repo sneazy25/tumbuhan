@@ -50,10 +50,10 @@ export function Navbar({ lang, setLang }: NavbarProps) {
                 <ChevronDown className="size-3 text-muted-foreground opacity-60 group-hover:opacity-100 transition-opacity" />
               </div>
             </DropdownMenuTrigger>
-            <DropdownMenuContent align="end" className="w-[150px] rounded-xl border-border/50 shadow-lg p-1">
+            <DropdownMenuContent align="end" className="w-[150px] rounded-lg border-border/50 shadow-lg p-1">
               <DropdownMenuItem 
                 onClick={() => setLang('id')}
-                className={`flex items-center justify-between cursor-pointer rounded-lg text-sm font-medium py-2 px-3 ${lang === 'id' ? 'bg-muted' : ''}`}
+                className={`flex items-center justify-between cursor-pointer rounded-md text-sm font-medium py-2 px-3 ${lang === 'id' ? 'bg-muted' : ''}`}
               >
                 <div className="flex items-center gap-2.5">
                   <img src="https://flagcdn.com/w20/id.png" alt="ID" className="w-4 h-3 rounded-[2px] object-cover ring-1 ring-border/50" />
@@ -63,7 +63,7 @@ export function Navbar({ lang, setLang }: NavbarProps) {
               </DropdownMenuItem>
               <DropdownMenuItem 
                 onClick={() => setLang('en')}
-                className={`flex items-center justify-between cursor-pointer rounded-lg text-sm font-medium py-2 px-3 ${lang === 'en' ? 'bg-muted' : ''}`}
+                className={`flex items-center justify-between cursor-pointer rounded-md text-sm font-medium py-2 px-3 ${lang === 'en' ? 'bg-muted' : ''}`}
               >
                 <div className="flex items-center gap-2.5">
                   <img src="https://flagcdn.com/w20/us.png" alt="EN" className="w-4 h-3 rounded-[2px] object-cover ring-1 ring-border/50" />
