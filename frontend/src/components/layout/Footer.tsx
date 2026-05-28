@@ -24,9 +24,9 @@ export function Footer({ lang }: FooterProps) {
       <div className="container mx-auto px-4 md:px-6 max-w-5xl">
         <div className="grid md:grid-cols-3 gap-6 md:gap-12 mb-8 md:mb-10">
           <div className="flex flex-col gap-4">
-            <div className="flex items-center gap-2.5 text-xl font-bold tracking-tight text-foreground">
-              <Leaf className="size-6 text-primary" />
-              Leafity
+            <div className="flex items-center text-xl font-bold tracking-tight text-foreground">
+              <img src="/logo.png" alt="Leafity Logo" className="w-9 h-9 md:w-12 md:h-12 object-contain shrink-0 relative z-10" />
+              <img src="/brand.png" alt="Leafity" className="h-7 md:h-10 object-contain dark:invert shrink-0 -ml-4 md:-ml-6" />
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed pr-4">
               {t.footer.desc}

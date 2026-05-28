@@ -38,9 +38,9 @@ export function Navbar({ lang, setLang }: NavbarProps) {
   return (
     <nav className="fixed top-0 w-full border-b border-border/40 bg-background/80 backdrop-blur-md z-50">
       <div className="container mx-auto px-4 md:px-6 h-14 md:h-16 flex items-center justify-between">
-        <div className="flex items-center gap-1.5 md:gap-2.5 text-base md:text-xl font-bold tracking-tight text-foreground">
-          <Leaf className="size-5 md:size-6 text-primary" />
-          Leafity
+        <div className="flex items-center">
+          <img src="/logo.png" alt="Leafity Logo" className="w-7 h-7 sm:w-9 sm:h-9 md:w-10 md:h-10 object-contain shrink-0 relative z-10" />
+          <img src="/brand.png" alt="Leafity" className="h-6 sm:h-7 md:h-8 object-contain dark:invert shrink-0 -ml-3 md:-ml-5" />
         </div>
         <div className="flex items-center gap-3">
           <DropdownMenu>
