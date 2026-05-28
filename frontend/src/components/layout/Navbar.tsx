@@ -78,37 +78,37 @@ export function Navbar({ lang, setLang }: NavbarProps) {
             <DialogTrigger render={<Button className="bg-primary text-primary-foreground hover:bg-primary/90 text-xs md:text-sm font-semibold rounded-full px-3 md:px-5 shadow-sm transition-all h-8 md:h-9" />}>
               {t.nav.howItWorks}
             </DialogTrigger>
-            <DialogContent className="sm:max-w-md bg-card border-border/50 backdrop-blur-xl">
+            <DialogContent className="sm:max-w-md w-[90vw] md:w-full max-h-[85vh] overflow-y-auto bg-card border-border/50 backdrop-blur-xl">
               <DialogHeader>
-                <DialogTitle className="text-xl">{t.howItWorksModal.title}</DialogTitle>
-                <DialogDescription>
+                <DialogTitle className="text-lg md:text-xl">{t.howItWorksModal.title}</DialogTitle>
+                <DialogDescription className="text-xs md:text-sm">
                   {t.howItWorksModal.desc}
                 </DialogDescription>
               </DialogHeader>
-              <div className="space-y-6 py-4">
-                <div className="flex gap-4 items-start">
-                  <div className="size-8 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold shrink-0">1</div>
+              <div className="space-y-4 md:space-y-6 py-2 md:py-4">
+                <div className="flex gap-3 md:gap-4 items-start">
+                  <div className="size-6 md:size-8 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold shrink-0 text-xs md:text-base">1</div>
                   <div>
-                    <h4 className="font-semibold text-foreground">{t.howItWorksModal.step1Title}</h4>
-                    <p className="text-sm text-muted-foreground mt-1 leading-relaxed">
+                    <h4 className="font-semibold text-sm md:text-base text-foreground">{t.howItWorksModal.step1Title}</h4>
+                    <p className="text-[11px] md:text-sm text-muted-foreground mt-0.5 md:mt-1 leading-relaxed">
                       {t.howItWorksModal.step1Desc}
                     </p>
                   </div>
                 </div>
-                <div className="flex gap-4 items-start">
-                  <div className="size-8 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold shrink-0">2</div>
+                <div className="flex gap-3 md:gap-4 items-start">
+                  <div className="size-6 md:size-8 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold shrink-0 text-xs md:text-base">2</div>
                   <div>
-                    <h4 className="font-semibold text-foreground">{t.howItWorksModal.step2Title}</h4>
-                    <p className="text-sm text-muted-foreground mt-1 leading-relaxed">
+                    <h4 className="font-semibold text-sm md:text-base text-foreground">{t.howItWorksModal.step2Title}</h4>
+                    <p className="text-[11px] md:text-sm text-muted-foreground mt-0.5 md:mt-1 leading-relaxed">
                       {t.howItWorksModal.step2Desc}
                     </p>
                   </div>
                 </div>
-                <div className="flex gap-4 items-start">
-                  <div className="size-8 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold shrink-0">3</div>
+                <div className="flex gap-3 md:gap-4 items-start">
+                  <div className="size-6 md:size-8 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold shrink-0 text-xs md:text-base">3</div>
                   <div>
-                    <h4 className="font-semibold text-foreground">{t.howItWorksModal.step3Title}</h4>
-                    <p className="text-sm text-muted-foreground mt-1 leading-relaxed">
+                    <h4 className="font-semibold text-sm md:text-base text-foreground">{t.howItWorksModal.step3Title}</h4>
+                    <p className="text-[11px] md:text-sm text-muted-foreground mt-0.5 md:mt-1 leading-relaxed">
                       {t.howItWorksModal.step3Desc}
                     </p>
                   </div>

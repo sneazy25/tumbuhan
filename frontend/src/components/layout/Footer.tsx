@@ -46,37 +46,37 @@ export function Footer({ lang }: FooterProps) {
                 <DialogTrigger render={<button className="text-sm text-left text-muted-foreground hover:text-primary transition-colors w-fit" />}>
                   {t.nav.howItWorks}
                 </DialogTrigger>
-                <DialogContent className="sm:max-w-md bg-card border-border/50 backdrop-blur-xl">
+                <DialogContent className="sm:max-w-md w-[90vw] md:w-full max-h-[85vh] overflow-y-auto bg-card border-border/50 backdrop-blur-xl">
                   <DialogHeader>
-                    <DialogTitle className="text-xl">{t.howItWorksModal.title}</DialogTitle>
-                    <DialogDescription>
+                    <DialogTitle className="text-lg md:text-xl">{t.howItWorksModal.title}</DialogTitle>
+                    <DialogDescription className="text-xs md:text-sm">
                       {t.howItWorksModal.desc}
                     </DialogDescription>
                   </DialogHeader>
-                  <div className="space-y-6 py-4">
-                    <div className="flex gap-4 items-start">
-                      <div className="size-8 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold shrink-0">1</div>
+                  <div className="space-y-4 md:space-y-6 py-2 md:py-4">
+                    <div className="flex gap-3 md:gap-4 items-start">
+                      <div className="size-6 md:size-8 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold shrink-0 text-xs md:text-base">1</div>
                       <div>
-                        <h4 className="font-semibold text-foreground">{t.howItWorksModal.step1Title}</h4>
-                        <p className="text-sm text-muted-foreground mt-1 leading-relaxed">
+                        <h4 className="font-semibold text-sm md:text-base text-foreground">{t.howItWorksModal.step1Title}</h4>
+                        <p className="text-[11px] md:text-sm text-muted-foreground mt-0.5 md:mt-1 leading-relaxed">
                           {t.howItWorksModal.step1Desc}
                         </p>
                       </div>
                     </div>
-                    <div className="flex gap-4 items-start">
-                      <div className="size-8 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold shrink-0">2</div>
+                    <div className="flex gap-3 md:gap-4 items-start">
+                      <div className="size-6 md:size-8 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold shrink-0 text-xs md:text-base">2</div>
                       <div>
-                        <h4 className="font-semibold text-foreground">{t.howItWorksModal.step2Title}</h4>
-                        <p className="text-sm text-muted-foreground mt-1 leading-relaxed">
+                        <h4 className="font-semibold text-sm md:text-base text-foreground">{t.howItWorksModal.step2Title}</h4>
+                        <p className="text-[11px] md:text-sm text-muted-foreground mt-0.5 md:mt-1 leading-relaxed">
                           {t.howItWorksModal.step2Desc}
                         </p>
                       </div>
                     </div>
-                    <div className="flex gap-4 items-start">
-                      <div className="size-8 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold shrink-0">3</div>
+                    <div className="flex gap-3 md:gap-4 items-start">
+                      <div className="size-6 md:size-8 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold shrink-0 text-xs md:text-base">3</div>
                       <div>
-                        <h4 className="font-semibold text-foreground">{t.howItWorksModal.step3Title}</h4>
-                        <p className="text-sm text-muted-foreground mt-1 leading-relaxed">
+                        <h4 className="font-semibold text-sm md:text-base text-foreground">{t.howItWorksModal.step3Title}</h4>
+                        <p className="text-[11px] md:text-sm text-muted-foreground mt-0.5 md:mt-1 leading-relaxed">
                           {t.howItWorksModal.step3Desc}
                         </p>
                       </div>
@@ -88,25 +88,25 @@ export function Footer({ lang }: FooterProps) {
                 <DialogTrigger render={<button className="text-sm text-left text-muted-foreground hover:text-primary transition-colors w-fit" />}>
                   {t.footer.privacy}
                 </DialogTrigger>
-                <DialogContent className="sm:max-w-lg bg-card border-border/50 backdrop-blur-xl max-h-[80vh] overflow-y-auto">
+                <DialogContent className="sm:max-w-lg w-[90vw] md:w-full bg-card border-border/50 backdrop-blur-xl max-h-[85vh] overflow-y-auto">
                   <DialogHeader>
-                    <DialogTitle className="text-xl">{t.footer.privacy}</DialogTitle>
-                    <DialogDescription>
+                    <DialogTitle className="text-lg md:text-xl">{t.footer.privacy}</DialogTitle>
+                    <DialogDescription className="text-xs md:text-sm">
                       {t.footer.privacyDesc}
                     </DialogDescription>
                   </DialogHeader>
-                  <div className="space-y-4 py-4">
+                  <div className="space-y-3 md:space-y-4 py-2 md:py-4">
                     <div>
-                      <h4 className="font-semibold text-foreground mb-1">{t.footer.privacy1}</h4>
-                      <p className="text-sm text-muted-foreground leading-relaxed">{t.footer.privacy1Desc}</p>
+                      <h4 className="font-semibold text-sm md:text-base text-foreground mb-1">{t.footer.privacy1}</h4>
+                      <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">{t.footer.privacy1Desc}</p>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-foreground mb-1">{t.footer.privacy2}</h4>
-                      <p className="text-sm text-muted-foreground leading-relaxed">{t.footer.privacy2Desc}</p>
+                      <h4 className="font-semibold text-sm md:text-base text-foreground mb-1">{t.footer.privacy2}</h4>
+                      <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">{t.footer.privacy2Desc}</p>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-foreground mb-1">{t.footer.privacy3}</h4>
-                      <p className="text-sm text-muted-foreground leading-relaxed">{t.footer.privacy3Desc}</p>
+                      <h4 className="font-semibold text-sm md:text-base text-foreground mb-1">{t.footer.privacy3}</h4>
+                      <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">{t.footer.privacy3Desc}</p>
                     </div>
                   </div>
                 </DialogContent>
@@ -115,25 +115,25 @@ export function Footer({ lang }: FooterProps) {
                 <DialogTrigger render={<button className="text-sm text-left text-muted-foreground hover:text-primary transition-colors w-fit" />}>
                   {t.footer.terms}
                 </DialogTrigger>
-                <DialogContent className="sm:max-w-lg bg-card border-border/50 backdrop-blur-xl max-h-[80vh] overflow-y-auto">
+                <DialogContent className="sm:max-w-lg w-[90vw] md:w-full bg-card border-border/50 backdrop-blur-xl max-h-[85vh] overflow-y-auto">
                   <DialogHeader>
-                    <DialogTitle className="text-xl">{t.footer.terms}</DialogTitle>
-                    <DialogDescription>
+                    <DialogTitle className="text-lg md:text-xl">{t.footer.terms}</DialogTitle>
+                    <DialogDescription className="text-xs md:text-sm">
                       {t.footer.termsDesc}
                     </DialogDescription>
                   </DialogHeader>
-                  <div className="space-y-4 py-4">
+                  <div className="space-y-3 md:space-y-4 py-2 md:py-4">
                     <div>
-                      <h4 className="font-semibold text-foreground mb-1">{t.footer.terms1}</h4>
-                      <p className="text-sm text-muted-foreground leading-relaxed">{t.footer.terms1Desc}</p>
+                      <h4 className="font-semibold text-sm md:text-base text-foreground mb-1">{t.footer.terms1}</h4>
+                      <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">{t.footer.terms1Desc}</p>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-foreground mb-1">{t.footer.terms2}</h4>
-                      <p className="text-sm text-muted-foreground leading-relaxed">{t.footer.terms2Desc}</p>
+                      <h4 className="font-semibold text-sm md:text-base text-foreground mb-1">{t.footer.terms2}</h4>
+                      <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">{t.footer.terms2Desc}</p>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-foreground mb-1">{t.footer.terms3}</h4>
-                      <p className="text-sm text-muted-foreground leading-relaxed">{t.footer.terms3Desc}</p>
+                      <h4 className="font-semibold text-sm md:text-base text-foreground mb-1">{t.footer.terms3}</h4>
+                      <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">{t.footer.terms3Desc}</p>
                     </div>
                   </div>
                 </DialogContent>
