@@ -5,7 +5,7 @@ import { Footer } from "@/components/layout/Footer";
 import { PanduanPenanganan } from "@/components/PanduanPenanganan";
 
 import { useState, useRef } from "react";
-import { Leaf, ScanLine, UploadCloud, AlertCircle, CheckCircle2, Activity, ShieldAlert, Globe, ChevronDown, Check, Search } from "lucide-react";
+import { Leaf, ScanLine, UploadCloud, AlertCircle, CheckCircle2, Loader2, ShieldAlert, Globe, ChevronDown, Check, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import {
@@ -188,7 +188,7 @@ export default function Home() {
                   >
                     {isUploading ? (
                       <>
-                        <Activity className="mr-2 size-5 animate-spin" />
+                        <Loader2 className="mr-2 size-5 animate-spin" />
                         {t.upload.analyzingText}
                       </>
                     ) : (
