@@ -4,8 +4,7 @@ data/raw/
 # Data processed (opsional, hapus baris ini kalau mau ikut)
 data/processed/
 
-# Model .pth - ukuran besar
-model/plant_model.pth
+# model/plant_model.pth
 
 # Python cache
 __pycache__/
