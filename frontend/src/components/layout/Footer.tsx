@@ -147,15 +147,48 @@ export function Footer({ lang }: FooterProps) {
               {t.footer.communityDesc}
             </p>
             <div className="flex items-center gap-3">
-              <a href="#" className="text-muted-foreground hover:text-primary transition-all hover:-translate-y-1 bg-muted p-2.5 rounded-full" aria-label="Instagram">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
-              </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-all hover:-translate-y-1 bg-muted p-2.5 rounded-full" aria-label="X (Twitter)">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4l11.733 16h4.267l-11.733 -16z"/><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"/></svg>
-              </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-all hover:-translate-y-1 bg-muted p-2.5 rounded-full" aria-label="Discord">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 12h.01"/><path d="M15 12h.01"/><path d="M7.5 4.2c-1.8 1.4-3.5 3.5-4.2 6.3-1.2 5.1-.3 8.7 1.5 10.5 1.5 1.5 4.5 1.2 6.2.3.8-.5 1.8-.5 2.5 0 1.7.9 4.7 1.2 6.2-.3 1.8-1.8 2.7-5.4 1.5-10.5-.7-2.8-2.4-4.9-4.2-6.3"/><path d="M11 4.5V3a1 1 0 0 1 2 0v1.5"/></svg>
-              </a>
+              <Dialog>
+                <DialogTrigger render={<button className="text-muted-foreground hover:text-primary transition-all hover:-translate-y-1 bg-muted p-2.5 rounded-full" aria-label="Instagram" />}>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                </DialogTrigger>
+                <DialogContent className="sm:max-w-xs w-[85vw] bg-card border-border/50 backdrop-blur-xl text-center flex flex-col items-center py-8 md:py-10">
+                  <div className="size-12 md:size-14 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-3 md:mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                  </div>
+                  <DialogTitle className="text-base md:text-lg font-bold mb-1 md:mb-2 text-foreground">Instagram</DialogTitle>
+                  <DialogDescription className="text-xs md:text-sm text-muted-foreground">
+                    {t.footer.socialNotAdded}
+                  </DialogDescription>
+                </DialogContent>
+              </Dialog>
+              <Dialog>
+                <DialogTrigger render={<button className="text-muted-foreground hover:text-primary transition-all hover:-translate-y-1 bg-muted p-2.5 rounded-full" aria-label="X (Twitter)" />}>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4l11.733 16h4.267l-11.733 -16z"/><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"/></svg>
+                </DialogTrigger>
+                <DialogContent className="sm:max-w-xs w-[85vw] bg-card border-border/50 backdrop-blur-xl text-center flex flex-col items-center py-8 md:py-10">
+                  <div className="size-12 md:size-14 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-3 md:mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4l11.733 16h4.267l-11.733 -16z"/><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"/></svg>
+                  </div>
+                  <DialogTitle className="text-base md:text-lg font-bold mb-1 md:mb-2 text-foreground">X (Twitter)</DialogTitle>
+                  <DialogDescription className="text-xs md:text-sm text-muted-foreground">
+                    {t.footer.socialNotAdded}
+                  </DialogDescription>
+                </DialogContent>
+              </Dialog>
+              <Dialog>
+                <DialogTrigger render={<button className="text-muted-foreground hover:text-primary transition-all hover:-translate-y-1 bg-muted p-2.5 rounded-full" aria-label="Discord" />}>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 12h.01"/><path d="M15 12h.01"/><path d="M7.5 4.2c-1.8 1.4-3.5 3.5-4.2 6.3-1.2 5.1-.3 8.7 1.5 10.5 1.5 1.5 4.5 1.2 6.2.3.8-.5 1.8-.5 2.5 0 1.7.9 4.7 1.2 6.2-.3 1.8-1.8 2.7-5.4 1.5-10.5-.7-2.8-2.4-4.9-4.2-6.3"/><path d="M11 4.5V3a1 1 0 0 1 2 0v1.5"/></svg>
+                </DialogTrigger>
+                <DialogContent className="sm:max-w-xs w-[85vw] bg-card border-border/50 backdrop-blur-xl text-center flex flex-col items-center py-8 md:py-10">
+                  <div className="size-12 md:size-14 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-3 md:mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 12h.01"/><path d="M15 12h.01"/><path d="M7.5 4.2c-1.8 1.4-3.5 3.5-4.2 6.3-1.2 5.1-.3 8.7 1.5 10.5 1.5 1.5 4.5 1.2 6.2.3.8-.5 1.8-.5 2.5 0 1.7.9 4.7 1.2 6.2-.3 1.8-1.8 2.7-5.4 1.5-10.5-.7-2.8-2.4-4.9-4.2-6.3"/><path d="M11 4.5V3a1 1 0 0 1 2 0v1.5"/></svg>
+                  </div>
+                  <DialogTitle className="text-base md:text-lg font-bold mb-1 md:mb-2 text-foreground">Discord</DialogTitle>
+                  <DialogDescription className="text-xs md:text-sm text-muted-foreground">
+                    {t.footer.socialNotAdded}
+                  </DialogDescription>
+                </DialogContent>
+              </Dialog>
             </div>
           </div>
         </div>

@@ -64,7 +64,8 @@ export const translations = {
       terms3Desc: "Leafity tidak bertanggung jawab atas kerugian panen, kerusakan tanaman, atau kerugian finansial yang mungkin timbul akibat ketergantungan pada hasil analisis aplikasi ini.",
       community: "Komunitas Kami",
       communityDesc: "Bergabunglah dengan komunitas petani modern dan para ahli biologi tanaman di media sosial kami.",
-      copyright: "Hak Cipta Dilindungi."
+      copyright: "Hak Cipta Dilindungi.",
+      socialNotAdded: "Tautan media sosial ini belum ditambahkan."
     },
     errors: {
       noFiles: "Tidak ada file yang dipilih",
@@ -137,7 +138,8 @@ export const translations = {
       terms3Desc: "Leafity is not responsible for crop loss, plant damage, or financial losses that may arise from relying on the analysis results of this application.",
       community: "Our Community",
       communityDesc: "Join our community of modern farmers and plant biologists on our social media.",
-      copyright: "All Rights Reserved."
+      copyright: "All Rights Reserved.",
+      socialNotAdded: "This social media link has not been added yet."
     },
     errors: {
       noFiles: "No files selected",
