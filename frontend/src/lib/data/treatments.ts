@@ -255,12 +255,16 @@ export const treatmentDictionary: Record<string, { id: string[]; en: string[] }>
     id: [
       "Lakukan penyiraman secara rutin sesuai kebutuhan jenis tanaman, pastikan media tanam tidak terlalu kering atau tergenang air.",
       "Berikan pupuk organik atau NPK secara berkala untuk menjaga ketersediaan nutrisi makro dan mikro agar tanaman tetap subur.",
-      "Pastikan tanaman mendapatkan sinar matahari yang cukup dan sirkulasi udara yang baik, serta bersihkan gulma dan daun kering secara rutin."
+      "Pastikan tanaman mendapatkan sinar matahari yang cukup dan sirkulasi udara yang baik di sekitar area daun.",
+      "Lakukan pemangkasan (pruning) secara rutin pada dahan atau daun yang sudah tua untuk merangsang pertumbuhan tunas baru.",
+      "Periksa bagian bawah daun dan pangkal batang secara berkala untuk memastikan tidak ada bibit hama atau jamur yang mulai bersarang."
     ],
     en: [
       "Water regularly according to the specific plant's needs, ensuring the growing medium is neither excessively dry nor waterlogged.",
       "Apply organic or NPK fertilizers periodically to maintain the availability of macro and micro nutrients so the plant remains fertile.",
-      "Ensure the plant receives adequate sunlight and good air circulation, and regularly clean up weeds and dry leaves."
+      "Ensure the plant receives adequate sunlight and good air circulation around the foliage area.",
+      "Regularly prune older branches or yellowing leaves to stimulate the growth of healthy new shoots.",
+      "Routinely inspect the undersides of leaves and the base of the stems to ensure no early signs of pests or fungal infections are present."
     ]
   }
 };
