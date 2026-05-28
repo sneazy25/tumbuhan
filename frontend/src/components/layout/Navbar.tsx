@@ -39,21 +39,21 @@ export function Navbar({ lang, setLang }: NavbarProps) {
     <nav className="fixed top-0 w-full border-b border-border/40 bg-background/80 backdrop-blur-md z-50">
       <div className="container mx-auto px-4 md:px-6 h-14 md:h-16 flex items-center justify-between">
         <div className="flex items-center">
-          <img src="/logo.png" alt="Leafity Logo" className="w-7 h-7 sm:w-9 sm:h-9 md:w-10 md:h-10 object-contain shrink-0 relative z-10" />
-          <img src="/brand.png" alt="Leafity" className="h-6 sm:h-7 md:h-8 object-contain dark:invert shrink-0 -ml-3 md:-ml-5" />
+          <img src="/logo.png" alt="Leafity Logo" className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 object-contain shrink-0 relative z-10" />
+          <img src="/brand.png" alt="Leafity" className="h-6 sm:h-6 md:h-7 object-contain dark:invert shrink-0 -ml-4 md:-ml-6" />
         </div>
         <div className="flex items-center gap-3">
           <DropdownMenu>
-            <DropdownMenuTrigger className="group flex items-center h-8 md:h-9 gap-1.5 md:gap-2 pl-1.5 pr-3 text-xs font-semibold rounded-full bg-background/50 hover:bg-muted/80 backdrop-blur-md border border-border/50 shadow-sm transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
-              <div className="size-5 md:size-6 rounded-full overflow-hidden ring-1 ring-border/50 shrink-0 shadow-sm group-hover:scale-105 transition-transform">
+            <DropdownMenuTrigger className="group flex items-center h-8 md:h-9 gap-1 md:gap-2 pl-1.5 md:pl-2 pr-2.5 md:pr-3 text-[11px] sm:text-xs font-semibold rounded-full bg-background/50 hover:bg-muted/80 backdrop-blur-md border border-border/50 shadow-sm transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
+              <div className="size-[18px] sm:size-5 md:size-6 rounded-full overflow-hidden ring-1 ring-border/50 shrink-0 shadow-sm group-hover:scale-105 transition-transform">
                 <img 
                   src={lang === "id" ? "https://flagcdn.com/w40/id.png" : "https://flagcdn.com/w40/us.png"} 
                   alt={lang} 
                   className="w-full h-full object-cover" 
                 />
               </div>
-              <div className="w-[1px] h-3.5 bg-border/80"></div>
-              <div className="flex items-center gap-1">
+              <div className="w-[1px] h-3 md:h-3.5 bg-border/80"></div>
+              <div className="flex items-center gap-0.5 md:gap-1">
                 <span className="uppercase tracking-widest text-foreground">{lang}</span>
                 <ChevronDown className="size-3 text-muted-foreground opacity-60 group-hover:opacity-100 transition-opacity" />
               </div>
@@ -121,7 +121,7 @@ export function Navbar({ lang, setLang }: NavbarProps) {
           </DropdownMenu>
           
           <Dialog>
-            <DialogTrigger render={<Button className="bg-primary text-primary-foreground hover:bg-primary/90 text-xs md:text-sm font-semibold rounded-full px-3 md:px-5 shadow-sm transition-all h-8 md:h-9" />}>
+            <DialogTrigger render={<Button className="bg-primary text-primary-foreground hover:bg-primary/90 text-[11px] sm:text-xs md:text-sm font-semibold rounded-full px-3 md:px-5 shadow-sm transition-all h-8 md:h-9" />}>
               {t.nav.howItWorks}
             </DialogTrigger>
             <DialogContent className="sm:max-w-md w-[90vw] md:w-full max-h-[85vh] overflow-y-auto bg-card border-border/50 backdrop-blur-xl">
