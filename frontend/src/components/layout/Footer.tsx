@@ -20,9 +20,9 @@ export function Footer({ lang }: FooterProps) {
   const t = translations[lang];
 
   return (
-    <footer className="border-t border-border/40 bg-background/50 backdrop-blur-sm mt-12 py-12">
-      <div className="container mx-auto px-6 max-w-5xl">
-        <div className="grid md:grid-cols-3 gap-8 md:gap-12 mb-10">
+    <footer className="border-t border-border/40 bg-background/50 backdrop-blur-sm mt-8 md:mt-12 py-8 md:py-12">
+      <div className="container mx-auto px-4 md:px-6 max-w-5xl">
+        <div className="grid md:grid-cols-3 gap-6 md:gap-12 mb-8 md:mb-10">
           <div className="flex flex-col gap-4">
             <div className="flex items-center gap-2.5 text-xl font-bold tracking-tight text-foreground">
               <Leaf className="size-6 text-primary" />
@@ -160,7 +160,7 @@ export function Footer({ lang }: FooterProps) {
           </div>
         </div>
         
-        <div className="pt-8 border-t border-border/60 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="pt-6 md:pt-8 border-t border-border/60 flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="text-sm text-muted-foreground text-center md:text-left">
             &copy; {new Date().getFullYear()} Leafity. {t.footer.copyright}
           </div>

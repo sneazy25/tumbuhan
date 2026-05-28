@@ -29,14 +29,14 @@ export function Navbar({ lang, setLang }: NavbarProps) {
 
   return (
     <nav className="fixed top-0 w-full border-b border-border/40 bg-background/80 backdrop-blur-md z-50">
-      <div className="container mx-auto px-6 h-16 flex items-center justify-between">
-        <div className="flex items-center gap-2.5 text-xl font-bold tracking-tight text-foreground">
-          <Leaf className="size-6 text-primary" />
+      <div className="container mx-auto px-4 md:px-6 h-14 md:h-16 flex items-center justify-between">
+        <div className="flex items-center gap-1.5 md:gap-2.5 text-base md:text-xl font-bold tracking-tight text-foreground">
+          <Leaf className="size-5 md:size-6 text-primary" />
           Leafity
         </div>
         <div className="flex items-center gap-3">
           <DropdownMenu>
-            <DropdownMenuTrigger className="group flex items-center h-8 md:h-9 gap-1.5 md:gap-2 pl-1 md:pl-1.5 pr-2 md:pr-3 text-[10px] md:text-xs font-bold rounded-full bg-background/50 hover:bg-muted/80 backdrop-blur-md border border-border/50 shadow-sm transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
+            <DropdownMenuTrigger className="group flex items-center h-8 md:h-9 gap-1.5 md:gap-2 pl-1.5 pr-3 text-xs font-semibold rounded-full bg-background/50 hover:bg-muted/80 backdrop-blur-md border border-border/50 shadow-sm transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
               <div className="size-5 md:size-6 rounded-full overflow-hidden ring-1 ring-border/50 shrink-0 shadow-sm group-hover:scale-105 transition-transform">
                 <img 
                   src={lang === "id" ? "https://flagcdn.com/w40/id.png" : "https://flagcdn.com/w40/us.png"} 
