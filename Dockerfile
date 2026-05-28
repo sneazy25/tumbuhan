@@ -1,12 +1,10 @@
 FROM python:3.9-slim
 
-# Atur direktori kerja
 WORKDIR /app
 
 # Salin file requirements backend
 COPY backend/requirements.txt .
 
-# Install dependencies (menggunakan versi ringan PyTorch CPU)
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Salin folder backend dan model
