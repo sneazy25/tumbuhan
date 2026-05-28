@@ -13,10 +13,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY backend /app/backend
 COPY model /app/model
 
-# Pindah ke folder backend agar app.py bisa dijalankan dari sana
+
 WORKDIR /app/backend
 
-# Buka port 7860 (Hugging Face Spaces mewajibkan aplikasi berjalan di port ini)
 EXPOSE 7860
 
 # Jalankan server Flask menggunakan Gunicorn
