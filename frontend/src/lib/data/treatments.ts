@@ -250,6 +250,18 @@ export const treatmentDictionary: Record<string, { id: string[]; en: string[] }>
       "Use sterile scissors or pruners to cleanly cut off the leaves, twigs, or stems showing disease symptoms, then dispose of the cuttings far away from the garden.",
       "Re-evaluate your plant care routine, ensuring watering portions are not excessive and nutritional fertilization is balanced so the plant can naturally recover."
     ]
+  },
+  "healthy": {
+    id: [
+      "Lakukan penyiraman secara rutin sesuai kebutuhan jenis tanaman, pastikan media tanam tidak terlalu kering atau tergenang air.",
+      "Berikan pupuk organik atau NPK secara berkala untuk menjaga ketersediaan nutrisi makro dan mikro agar tanaman tetap subur.",
+      "Pastikan tanaman mendapatkan sinar matahari yang cukup dan sirkulasi udara yang baik, serta bersihkan gulma dan daun kering secara rutin."
+    ],
+    en: [
+      "Water regularly according to the specific plant's needs, ensuring the growing medium is neither excessively dry nor waterlogged.",
+      "Apply organic or NPK fertilizers periodically to maintain the availability of macro and micro nutrients so the plant remains fertile.",
+      "Ensure the plant receives adequate sunlight and good air circulation, and regularly clean up weeds and dry leaves."
+    ]
   }
 };
 

@@ -42,7 +42,11 @@ export function PanduanPenanganan({ plant, disease, lang }: PanduanPenangananPro
 
   return (
     <div className="w-full mt-4 pt-4 border-t border-border/40">
-      <span className="block text-[12px] font-semibold text-foreground mb-2">{t.results.treatmentGuide}</span>
+      <span className="block text-[12px] font-semibold text-foreground mb-2">
+        {disease.toLowerCase().includes('healthy') || disease.toLowerCase() === 'sehat' || disease.toLowerCase() === 'sehat.' 
+          ? t.results.maintenanceGuide 
+          : t.results.treatmentGuide}
+      </span>
       <ul className="space-y-1.5">
         {steps.map((step, idx) => (
           <li key={idx} className="flex gap-2.5 items-start text-[11px] md:text-xs text-muted-foreground leading-relaxed">

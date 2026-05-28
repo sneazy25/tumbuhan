@@ -319,19 +319,17 @@ export default function Home() {
                       </div>
                       
                       {/* Saran AI Gemini (Minimalist full-width bottom) */}
+                      <PanduanPenanganan plant={topResult.plant} disease={topResult.disease} lang={lang} />
                       {!isHealthy && (
-                        <>
-                          <PanduanPenanganan plant={topResult.plant} disease={topResult.disease} lang={lang} />
-                          <a 
-                            href={`https://www.google.com/search?q=${encodeURIComponent(topResult.disease + ' plant disease')}`} 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            className="flex md:hidden items-center justify-center w-full rounded-lg bg-primary/10 hover:bg-primary/20 text-primary transition-colors py-2 px-3 text-xs font-semibold gap-2 border border-primary/20 mt-4"
-                          >
-                            <Search className="size-3.5" />
-                            <span>{t.results.learnMore}</span>
-                          </a>
-                        </>
+                        <a 
+                          href={`https://www.google.com/search?q=${encodeURIComponent(topResult.disease + ' plant disease')}`} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="flex md:hidden items-center justify-center w-full rounded-lg bg-primary/10 hover:bg-primary/20 text-primary transition-colors py-2 px-3 text-xs font-semibold gap-2 border border-primary/20 mt-4"
+                        >
+                          <Search className="size-3.5" />
+                          <span>{t.results.learnMore}</span>
+                        </a>
                       )}
                     </div>
                   );
