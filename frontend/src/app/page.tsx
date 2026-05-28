@@ -146,7 +146,7 @@ export default function Home() {
             <div className="w-full">
               {previewUrls.length === 0 ? (
                 <div 
-                  className="border border-dashed border-border/60 bg-muted/30 rounded-2xl p-16 text-center transition-all hover:border-primary/40 hover:bg-muted/50 cursor-pointer flex flex-col items-center justify-center min-h-[320px]"
+                  className="border-2 border-dashed border-primary/30 dark:border-border/60 bg-primary/5 dark:bg-muted/30 rounded-2xl p-16 text-center transition-all hover:border-primary/60 dark:hover:border-primary/40 hover:bg-primary/10 dark:hover:bg-muted/50 cursor-pointer flex flex-col items-center justify-center min-h-[320px]"
                   onClick={() => fileInputRef.current?.click()}
                   onDragOver={handleDragOver}
                   onDrop={handleDrop}
@@ -160,7 +160,7 @@ export default function Home() {
                   </p>
                 </div>
               ) : (
-                <div className="bg-card border border-border/40 rounded-2xl p-6 shadow-sm">
+                <div className="bg-card border-2 border-primary/20 dark:border-border/40 rounded-2xl p-6 shadow-sm">
                   <div className="flex items-center justify-between mb-4">
                     <h3 className="font-medium text-foreground">{previewUrls.length} {t.upload.selectedFiles}</h3>
                     <Button variant="ghost" size="sm" onClick={resetAnalysis} className="text-muted-foreground hover:text-foreground">

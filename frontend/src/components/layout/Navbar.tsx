@@ -1,8 +1,10 @@
 "use client";
 
+import * as React from "react";
+import { useTheme } from "next-themes";
 import { Language } from "@/types";
 import { translations } from "@/lib/i18n/translations";
-import { Leaf, Globe, ChevronDown, Check } from "lucide-react";
+import { Leaf, Globe, ChevronDown, Check, Moon, Sun, Monitor } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -26,6 +28,12 @@ interface NavbarProps {
 
 export function Navbar({ lang, setLang }: NavbarProps) {
   const t = translations[lang];
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = React.useState(false);
+  
+  React.useEffect(() => {
+    setMounted(true);
+  }, []);
 
   return (
     <nav className="fixed top-0 w-full border-b border-border/40 bg-background/80 backdrop-blur-md z-50">
@@ -71,6 +79,44 @@ export function Navbar({ lang, setLang }: NavbarProps) {
                 </div>
                 {lang === 'en' && <Check className="size-4 text-primary" />}
               </DropdownMenuItem>
+              {mounted && (
+                <>
+                  <div className="h-px bg-border/60 my-1 mx-1"></div>
+                  <div className="px-2 py-1.5 pb-1">
+                    <span className="text-[10px] font-bold text-muted-foreground uppercase tracking-wider">{lang === 'id' ? 'Tampilan' : 'Appearance'}</span>
+                  </div>
+                  <DropdownMenuItem 
+                    onClick={() => setTheme('light')}
+                    className={`flex items-center justify-between cursor-pointer rounded-md text-sm font-medium py-2 px-3 ${theme === 'light' ? 'bg-muted' : ''}`}
+                  >
+                    <div className="flex items-center gap-2.5 text-foreground">
+                      <Sun className="size-4 text-muted-foreground" />
+                      {lang === 'id' ? 'Terang' : 'Light'}
+                    </div>
+                    {theme === 'light' && <Check className="size-4 text-primary" />}
+                  </DropdownMenuItem>
+                  <DropdownMenuItem 
+                    onClick={() => setTheme('dark')}
+                    className={`flex items-center justify-between cursor-pointer rounded-md text-sm font-medium py-2 px-3 ${theme === 'dark' ? 'bg-muted' : ''}`}
+                  >
+                    <div className="flex items-center gap-2.5 text-foreground">
+                      <Moon className="size-4 text-muted-foreground" />
+                      {lang === 'id' ? 'Gelap' : 'Dark'}
+                    </div>
+                    {theme === 'dark' && <Check className="size-4 text-primary" />}
+                  </DropdownMenuItem>
+                  <DropdownMenuItem 
+                    onClick={() => setTheme('system')}
+                    className={`flex items-center justify-between cursor-pointer rounded-md text-sm font-medium py-2 px-3 ${theme === 'system' ? 'bg-muted' : ''}`}
+                  >
+                    <div className="flex items-center gap-2.5 text-foreground">
+                      <Monitor className="size-4 text-muted-foreground" />
+                      {lang === 'id' ? 'Sistem' : 'System'}
+                    </div>
+                    {theme === 'system' && <Check className="size-4 text-primary" />}
+                  </DropdownMenuItem>
+                </>
+              )}
             </DropdownMenuContent>
           </DropdownMenu>
           
