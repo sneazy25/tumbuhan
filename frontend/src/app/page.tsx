@@ -4,8 +4,6 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { PanduanPenanganan } from "@/components/PanduanPenanganan";
 import { HeroCanvas } from "@/components/HeroCanvas";
-import { SupportedPlants } from "@/components/SupportedPlants";
-import { HowItWorksSection } from "@/components/HowItWorksSection";
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -157,7 +155,7 @@ export default function Home() {
         </HeroCanvas>
 
         {/* Upload & Analysis Content Area */}
-        <div id="upload-section" ref={uploadContainerRef} className="container mx-auto px-6 py-16 md:py-24 relative z-30 bg-background/95 backdrop-blur-xl border-x border-t border-border/40 shadow-[0_-20px_60px_-15px_rgba(0,0,0,0.1)] dark:shadow-[0_-20px_60px_-15px_rgba(0,0,0,0.5)] rounded-t-[2.5rem] md:rounded-t-[3rem] -mt-12 md:-mt-24 min-h-[60vh]">
+        <div id="upload-section" ref={uploadContainerRef} className="container mx-auto px-6 py-24 min-h-[80vh] relative z-20 bg-background">
           <div className="max-w-3xl mx-auto upload-animate">
 
           {/* Error Message */}
@@ -369,10 +367,6 @@ export default function Home() {
           )}
         </div>
         </div>
-
-        {/* New Informational Sections */}
-        <SupportedPlants />
-        <HowItWorksSection />
       </main>
 
       {/* Footer */}
