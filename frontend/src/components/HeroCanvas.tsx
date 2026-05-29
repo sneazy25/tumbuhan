@@ -31,8 +31,9 @@ export function HeroCanvas({ children }: HeroCanvasProps) {
 
     // Function to set canvas dimensions correctly maintaining aspect ratio handling
     const setDimensions = () => {
-      // Use device pixel ratio for sharper image on retina displays
-      const dpr = window.devicePixelRatio || 1;
+      // Cap DPR to 1 on mobile to prevent GPU strain, cap at 2 on desktop
+      const isMobile = window.innerWidth < 768;
+      const dpr = Math.min(window.devicePixelRatio || 1, isMobile ? 1 : 2);
       
       canvas.width = window.innerWidth * dpr;
       canvas.height = window.innerHeight * dpr;
@@ -42,10 +43,10 @@ export function HeroCanvas({ children }: HeroCanvasProps) {
       
       context.scale(dpr, dpr);
       
-      // Force high-quality image resampling for better "HD" look when stretched
+      // Reduce quality on mobile for better FPS
       context.imageSmoothingEnabled = true;
-      // @ts-ignore - Some older TS configs might not have imageSmoothingQuality typed, but browsers support it
-      context.imageSmoothingQuality = "high";
+      // @ts-ignore
+      context.imageSmoothingQuality = isMobile ? "low" : "high";
       
       render();
     };
