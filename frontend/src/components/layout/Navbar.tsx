@@ -30,13 +30,31 @@ export function Navbar({ lang, setLang }: NavbarProps) {
   const t = translations[lang];
   const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = React.useState(false);
+  const [isScrolled, setIsScrolled] = React.useState(false);
   
   React.useEffect(() => {
     setMounted(true);
+    
+    const handleScroll = () => {
+      // Hero canvas is 100vh and is pinned for 300vh. 
+      // The upload section will only appear after 300vh of scrolling.
+      // 3.1 ensures it only triggers right as the upload section starts overlapping.
+      const threshold = window.innerHeight * 3.1;
+      setIsScrolled(window.scrollY > threshold);
+    };
+    
+    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+    
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <nav className="fixed top-0 w-full border-b border-border/40 bg-background/80 backdrop-blur-md z-50">
+    <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+      isScrolled 
+        ? "border-b border-border/40 bg-background/80 backdrop-blur-md" 
+        : "bg-transparent border-transparent"
+    }`}>
       <div className="container mx-auto px-4 md:px-6 h-14 md:h-16 flex items-center justify-between">
         <div className="flex items-center">
           <img src="/logo.png" alt="Leafity Logo" className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 object-contain shrink-0 relative z-10" />

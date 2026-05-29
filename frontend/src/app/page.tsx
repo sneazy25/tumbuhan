@@ -3,6 +3,13 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { PanduanPenanganan } from "@/components/PanduanPenanganan";
+import { HeroCanvas } from "@/components/HeroCanvas";
+import { SupportedPlants } from "@/components/SupportedPlants";
+import { HowItWorksSection } from "@/components/HowItWorksSection";
+
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
 
 import { useState, useRef } from "react";
 import { Leaf, ScanLine, UploadCloud, AlertCircle, CheckCircle2, Loader2, ShieldAlert, Globe, ChevronDown, Check, Search } from "lucide-react";
@@ -35,8 +42,24 @@ export default function Home() {
   const [results, setResults] = useState<Prediction[][] | null>(null);
   const [error, setError] = useState<string | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const uploadContainerRef = useRef<HTMLDivElement>(null);
 
   const t = translations[lang];
+
+  useGSAP(() => {
+    gsap.registerPlugin(ScrollTrigger);
+    
+    gsap.from(".upload-animate", {
+      y: 60,
+      opacity: 0,
+      duration: 1,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: uploadContainerRef.current,
+        start: "top 85%",
+      }
+    });
+  }, { scope: uploadContainerRef });
 
   const handleFileSelect = (event: React.ChangeEvent<HTMLInputElement>) => {
     const files = Array.from(event.target.files || []);
@@ -118,17 +141,24 @@ export default function Home() {
       {/* Navigation */}
       <Navbar lang={lang} setLang={setLang} />
 
-      <main className="pt-32 pb-24 container mx-auto px-6 min-h-[80vh]">
-        <div className="max-w-3xl mx-auto">
-          {/* Header */}
-          <div className="text-center mb-12">
-            <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-4 text-balance text-foreground">
-              {t.hero.title}
-            </h1>
-            <p className="text-base md:text-lg text-muted-foreground max-w-xl mx-auto font-light leading-relaxed">
-              {t.hero.subtitle}
-            </p>
+      <main className="w-full">
+        {/* Fullscreen Cinematic Hero Animation */}
+        <HeroCanvas>
+          <div className="w-full max-w-7xl mx-auto px-4 md:px-6">
+            <div className="max-w-2xl text-left mt-[-10vh]">
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold tracking-tight mb-6 text-balance text-foreground drop-shadow-xl bg-clip-text text-transparent bg-gradient-to-b from-foreground to-foreground/70">
+                {t.hero.title}
+              </h1>
+              <p className="text-lg md:text-xl text-muted-foreground font-light leading-relaxed drop-shadow-xl max-w-xl mt-4">
+                {t.hero.subtitle}
+              </p>
+            </div>
           </div>
+        </HeroCanvas>
+
+        {/* Upload & Analysis Content Area */}
+        <div id="upload-section" ref={uploadContainerRef} className="container mx-auto px-6 py-16 md:py-24 relative z-30 bg-background/95 backdrop-blur-xl border-x border-t border-border/40 shadow-[0_-20px_60px_-15px_rgba(0,0,0,0.1)] dark:shadow-[0_-20px_60px_-15px_rgba(0,0,0,0.5)] rounded-t-[2.5rem] md:rounded-t-[3rem] -mt-12 md:-mt-24 min-h-[60vh]">
+          <div className="max-w-3xl mx-auto upload-animate">
 
           {/* Error Message */}
           {error && (
@@ -338,6 +368,11 @@ export default function Home() {
             </div>
           )}
         </div>
+        </div>
+
+        {/* New Informational Sections */}
+        <SupportedPlants />
+        <HowItWorksSection />
       </main>
 
       {/* Footer */}
